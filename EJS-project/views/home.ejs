@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p><%= data %></p>
+<% composeData.forEach(function(ele) { %>
+
+    <% var title1=ele.title %> 
+  <h3>  <%=title1 %>  </h3>
+  <% var length=100; %>
+  <% var myString=ele.post %>
+  <% var TruncatedString=myString.substring(0,length) %>
+  <%= TruncatedString + "........" %> <a href="/post/<%=title1%>">read more</a> 
+
+<% }) %> 
+
+
+<%- include('partials/footer');  -%> 
